@@ -1,16 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/site/Navbar";
+import Footer from "@/components/site/Footer";
+import FloatingActions from "@/components/site/FloatingActions";
+import Hero from "@/components/site/Hero";
+import Story from "@/components/site/Story";
+import Services from "@/components/site/Services";
+import Transformation from "@/components/site/Transformation";
+import Bridal from "@/components/site/Bridal";
+import Testimonials from "@/components/site/Testimonials";
+import Gallery from "@/components/site/Gallery";
+import Relatable from "@/components/site/Relatable";
+import CTA from "@/components/site/CTA";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
-  );
-};
-
-const Index = PlaceholderIndex;
+const Index = () => (
+  <main className="min-h-screen bg-background">
+    <Navbar />
+    <h1 className="sr-only">Florence Beauty Studio — Hair, Skin, Makeup &amp; Bridal in Mumbai</h1>
+    <Hero />
+    <Story />
+    <Services />
+    <Transformation />
+    <Bridal />
+    <Testimonials />
+    <Gallery />
+    <Relatable />
+    <CTA />
+    <Footer />
+    <FloatingActions />
+  </main>
+);
 
 export default Index;
