@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/florence-logo.jpg";
+import logo from "@/assets/florence-logo.png";
 import { cn } from "@/lib/utils";
 
 const links = [
