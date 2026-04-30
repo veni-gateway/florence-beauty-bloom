@@ -1,8 +1,15 @@
-User-agent: Googlebot
+User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
 
-User-agent: Bingbot
-Allow: /
+# Crawl delay in seconds (optional)
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://florencebeautybloom.com/sitemap.xml
+
 
 User-agent: Twitterbot
 Allow: /

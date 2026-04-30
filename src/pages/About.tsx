@@ -5,6 +5,8 @@ import Reveal from "@/components/site/Reveal";
 import { motion } from "framer-motion";
 import founder from "@/assets/founder.jpg";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
+import { pageMetadata } from "@/lib/seo";
 
 const timeline = [
   { year: "2016", t: "A small chair, a big dream", d: "Florence began as a one-chair studio in Bandra. Word travelled in whispers." },
@@ -22,6 +24,12 @@ const team = [
 
 const About = () => (
   <main className="min-h-screen bg-background">
+    <SEOHead
+      title={pageMetadata.about.title}
+      description={pageMetadata.about.description}
+      keywords={pageMetadata.about.keywords}
+      canonicalUrl={pageMetadata.about.canonicalUrl}
+    />
     <Navbar />
 
     {/* Hero */}

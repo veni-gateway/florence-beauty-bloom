@@ -5,6 +5,8 @@ import Reveal from "@/components/site/Reveal";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Clock, Instagram, Send } from "lucide-react";
 import { toast } from "sonner";
+import { SEOHead } from "@/components/SEOHead";
+import { pageMetadata } from "@/lib/seo";
 
 const services = ["Hair", "Skin", "Makeup", "Bridal Makeup", "Not sure yet"];
 
@@ -32,6 +34,12 @@ const Contact = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEOHead
+        title={pageMetadata.contact.title}
+        description={pageMetadata.contact.description}
+        keywords={pageMetadata.contact.keywords}
+        canonicalUrl={pageMetadata.contact.canonicalUrl}
+      />
       <Navbar />
 
       {/* Hero */}
