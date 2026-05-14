@@ -86,7 +86,7 @@ const Hero = () => {
               ))}
             </div>
             <div className="text-sm">
-              <p className="font-medium">2,400+ glowing clients</p>
+              <p className="font-medium">1,400+ glowing clients</p>
               <p className="text-muted-foreground text-xs">★★★★★ ・ rated love</p>
             </div>
           </motion.div>

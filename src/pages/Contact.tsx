@@ -7,6 +7,7 @@ import { Mail, Phone, MapPin, Clock, Instagram, Send } from "lucide-react";
 import { toast } from "sonner";
 import { SEOHead } from "@/components/SEOHead";
 import { pageMetadata } from "@/lib/seo";
+import { link } from "fs";
 
 const services = ["Hair", "Skin", "Makeup", "Bridal Makeup", "Not sure yet"];
 
@@ -25,10 +26,42 @@ const Contact = () => {
   const submit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+
+    // Extract form data
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const phone = formData.get("phone") as string;
+    const email = formData.get("email") as string;
+    const service = formData.get("service") as string;
+    const message = formData.get("message") as string;
+
+    // Create formatted message for WhatsApp
+    const whatsappMessage = `Hello Florence! 🤍
+
+I'm interested in booking your services.
+
+*Personal Details:*
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+
+*Service Interested:* ${service}
+
+*Message:*
+${message}
+
+Looking forward to hearing from you!`;
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/917600788388?text=${encodedMessage}`;
+
     setTimeout(() => {
       setLoading(false);
       (e.target as HTMLFormElement).reset();
-      toast.success("Sent with love. We'll be in touch within 24 hours. 🤍");
+      // Open WhatsApp in new tab
+      window.open(whatsappUrl, "_blank");
+      toast.success("Redirecting to WhatsApp. We'll be in touch within 24 hours. 🤍");
     }, 1100);
   };
 
@@ -66,14 +99,14 @@ const Contact = () => {
             <form onSubmit={submit} className="glass rounded-[2rem] p-8 md:p-12 space-y-7 shadow-soft">
               <div className="grid md:grid-cols-2 gap-7">
                 <Field label="Your name">
-                  <input required name="name" placeholder="Florence" className={inputCls} />
+                  <input required name="name" placeholder="Enter your name" className={inputCls} />
                 </Field>
                 <Field label="Phone">
-                  <input required name="phone" type="tel" placeholder="+91 98765 43210" className={inputCls} />
+                  <input required name="phone" type="tel" placeholder="Enter your mobile number" className={inputCls} />
                 </Field>
               </div>
               <Field label="Email">
-                <input required name="email" type="email" placeholder="you@florence.studio" className={inputCls} />
+                <input required name="email" type="email" placeholder="Enter your email" className={inputCls} />
               </Field>
               <Field label="Service">
                 <div className="flex flex-wrap gap-2 mt-1">
@@ -103,13 +136,13 @@ const Contact = () => {
           <Reveal delay={0.15} className="lg:col-span-2">
             <div className="space-y-5">
               {[
-                { Icon: MapPin, t: "The Studio", d: "12 Rose Lane, Bandra West, Mumbai 400050" },
-                { Icon: Phone, t: "Call or text", d: "+91 98765 43210" },
-                { Icon: Mail, t: "Email", d: "hello@florence.studio" },
-                { Icon: Clock, t: "Hours", d: "Mon — Sun ・ 10am to 8pm" },
-                { Icon: Instagram, t: "Instagram", d: "@florence.studio" },
-              ].map(({ Icon, t, d }) => (
-                <div key={t} className="glass rounded-2xl p-5 flex gap-4 items-start hover:shadow-soft transition-shadow duration-500">
+                { Icon: MapPin, t: "The Studio", d: "Shivranjani Park, beside Atulyam Aagan -1, near Morbi OverBridge, Vrindavan Society, Madhapar, Rajkot, Gujarat 360006", link : "https://share.google/38YTTfGZgzH2bOjvJ" },
+                { Icon: Phone, t: "Call or text", d: "+91 7600788388" , link: "tel:+917600788388"},
+                { Icon: Mail, t: "Email", d: "florencebeautystudio08@gmail.com", link: "mailto:florencebeautystudio08@gmail.com" },
+                { Icon: Clock, t: "Hours", d: "Mon — Sun ・ 8am to 10pm" },
+                { Icon: Instagram, t: "Instagram", d: "@__florence__beauty__", link: "https://www.instagram.com/__florence__beauty__?igsh=c3huMnRlbTJjbTUw" },
+              ].map(({ Icon, t, d, link }) => (
+                <a key={t} href={link} target={link?.startsWith("http") ? "_blank" : undefined} rel={link?.startsWith("http") ? "noopener noreferrer" : undefined} className={`glass rounded-2xl p-5 flex gap-4 items-start hover:shadow-soft transition-shadow duration-500 ${link ? "cursor-pointer" : ""}`}>
                   <span className="w-11 h-11 grid place-items-center rounded-full bg-gradient-gold text-gold-foreground shrink-0">
                     <Icon className="w-5 h-5" />
                   </span>
@@ -117,7 +150,7 @@ const Contact = () => {
                     <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">{t}</p>
                     <p className="font-serif text-lg mt-0.5">{d}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </Reveal>
@@ -130,10 +163,13 @@ const Contact = () => {
           <Reveal>
             <div className="rounded-[2rem] overflow-hidden shadow-soft border border-border">
               <iframe
-                title="Florence Studio location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=72.82%2C19.05%2C72.85%2C19.07&layer=mapnik"
+                title="Florence Beauty Studio location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.523281136142!2d70.7718361!3d22.3338621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c976b8d9d149%3A0x63a135a8e8d6c7cb!2sFlorence%20Beauty%20Studio!5e0!3m2!1sen!2sin!4v1778755928227!5m2!1sen!2sin"
                 className="w-full h-[420px]"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
           </Reveal>

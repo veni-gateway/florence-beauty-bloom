@@ -10,8 +10,8 @@ export const BUSINESS_INFO = {
   
   // Address information
   address: {
-    street: 'Bandra, Mumbai', // TODO: Update with full address
-    city: 'Mumbai',
+    street: 'Bandra, Rajkot', // TODO: Update with full address
+    city: 'Rajkot',
     state: 'Maharashtra',
     zipCode: '400050',
     country: 'India',
@@ -25,7 +25,7 @@ export const BUSINESS_INFO = {
   
   // Social media links
   social: {
-    instagram: 'https://instagram.com/florencebeauty', // TODO: Update
+    instagram: 'https://www.instagram.com/__florence__beauty__?igsh=c3huMnRlbTJjbTUw', 
     facebook: 'https://facebook.com/florencebeauty', // TODO: Update
     twitter: '@florencebeauty',
   },
@@ -44,7 +44,7 @@ export const BUSINESS_INFO = {
   // SEO Keywords
   keywords: {
     primary: 'beauty studio, bridal makeup, hair salon',
-    secondary: 'beauty services Mumbai, luxury salon, makeup artist',
+    secondary: 'beauty services Rajkot, luxury salon, makeup artist',
   },
 };
 

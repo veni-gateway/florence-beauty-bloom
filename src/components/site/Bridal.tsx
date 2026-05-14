@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
-import bridal from "@/assets/bridal.jpg";
+import bridal from "@/assets/indian_bridal_premium_soft.jpg";
 
 const Bridal = () => (
   <section className="relative py-28 overflow-hidden">

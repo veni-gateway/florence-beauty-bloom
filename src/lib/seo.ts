@@ -1,9 +1,9 @@
 // SEO configurations for each page
 export const pageMetadata = {
   home: {
-    title: 'Florence Beauty Studio — Hair, Skin, Makeup & Bridal in Mumbai',
-    description: 'Florence is a soft luxury beauty studio offering hair, skin, makeup & bridal services in Bandra, Mumbai. Where beauty feels like you.',
-    keywords: 'beauty studio Mumbai, bridal makeup, hair stylist, skin therapy, beauty services Bandra',
+    title: 'Florence Beauty Studio — Hair, Skin, Makeup & Bridal in Rajkot',
+    description: 'Florence is a soft luxury beauty studio offering hair, skin, makeup & bridal services in Bandra, Rajkot. Where beauty feels like you.',
+    keywords: 'beauty studio Rajkot, bridal makeup, hair stylist, skin therapy, beauty services Bandra',
     canonicalUrl: '/',
     ogType: 'website'
   },
@@ -16,8 +16,8 @@ export const pageMetadata = {
   },
   contact: {
     title: 'Contact Florence Beauty Studio | Bookings & Inquiries',
-    description: 'Get in touch with Florence Beauty Studio in Bandra, Mumbai. Book your appointment or inquire about our services.',
-    keywords: 'contact Florence beauty, book appointment, beauty studio Mumbai',
+    description: 'Get in touch with Florence Beauty Studio in Bandra, Rajkot. Book your appointment or inquire about our services.',
+    keywords: 'contact Florence beauty, book appointment, beauty studio Rajkot',
     canonicalUrl: '/contact',
     ogType: 'website'
   }
@@ -34,8 +34,8 @@ export const organizationSchema = {
   email: 'hello@florencebeauty.com', // Update with actual email
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Bandra, Mumbai', // Update with full address
-    addressLocality: 'Mumbai',
+    streetAddress: 'Bandra, Rajkot', // Update with full address
+    addressLocality: 'Rajkot',
     addressRegion: 'Maharashtra',
     postalCode: '400050',
     addressCountry: 'IN'
@@ -47,7 +47,7 @@ export const organizationSchema = {
   },
   image: 'https://florencebeautybloom.com/og-image.jpg',
   sameAs: [
-    'https://www.instagram.com/florencebeauty', // Update with actual Instagram
+    'https://www.instagram.com/__florence__beauty__?igsh=c3huMnRlbTJjbTUw', 
     'https://www.facebook.com/florencebeauty' // Update with actual Facebook
   ]
 };

@@ -37,9 +37,32 @@ const Footer = () => {
         <div>
           <h4 className="text-xl mb-4">Visit</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex gap-2"><MapPin className="w-4 h-4 mt-0.5 text-gold" /> 12 Rose Lane, Mumbai</li>
-            <li className="flex gap-2"><Phone className="w-4 h-4 mt-0.5 text-gold" /> +91 98765 43210</li>
-            <li className="flex gap-2"><Mail className="w-4 h-4 mt-0.5 text-gold" /> hello@florence.studio</li>
+            <li>
+              <a 
+                href="https://share.google/6uZ1PfA32ixJNm9Ic" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex gap-2 hover:text-primary transition-colors"
+              >
+                <MapPin className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" /> Shivranjani Park, Madhapar Circle, Rajkot
+              </a>
+            </li>
+            <li>
+              <a 
+                href="tel:+917600788388"
+                className="flex gap-2 hover:text-primary transition-colors"
+              >
+                <Phone className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" /> +91 7600788388
+              </a>
+            </li>
+            <li>
+              <a 
+                href="mailto:florencebeautystudio08@gmail.com"
+                className="flex gap-2 hover:text-primary transition-colors"
+              >
+                <Mail className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" /> florencebeautystudio08@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
 

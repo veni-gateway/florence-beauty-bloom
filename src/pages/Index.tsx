@@ -23,7 +23,7 @@ const Index = () => (
       schema={serviceSchema}
     />
     <Navbar />
-    <h1 className="sr-only">Florence Beauty Studio — Hair, Skin, Makeup &amp; Bridal in Mumbai</h1>
+    <h1 className="sr-only">Florence Beauty Studio — Hair, Skin, Makeup &amp; Bridal in Rajkot</h1>
     <Hero />
     <Story />
     <Services />

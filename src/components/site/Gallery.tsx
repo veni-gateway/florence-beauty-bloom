@@ -24,7 +24,7 @@ const Gallery = () => (
           </div>
         </Reveal>
         <Reveal delay={0.15}>
-          <a href="#" className="inline-flex items-center gap-2 text-sm hover:text-primary transition-colors">
+          <a href="https://www.instagram.com/__florence__beauty__?igsh=c3huMnRlbTJjbTUw" className="inline-flex items-center gap-2 text-sm hover:text-primary transition-colors">
             <Instagram className="w-4 h-4" /> Follow our soft chaos
           </a>
         </Reveal>
