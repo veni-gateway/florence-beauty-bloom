@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Facebook, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/florence-logo.png";
 
 const Footer = () => {
@@ -21,12 +21,20 @@ const Footer = () => {
             beauty is felt, and every moment is yours to keep.
           </p>
           <div className="flex gap-3">
-            {[Instagram, Facebook, Youtube].map((Icon, i) => (
+            {[
+              {
+                Icon: Instagram,
+                href: "https://www.instagram.com/__florence__beauty__?igsh=c3huMnRlbTJjbTUw",
+                label: "Instagram"
+              }
+            ].map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="#"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 grid place-items-center rounded-full glass hover:bg-gradient-gold hover:text-gold-foreground transition-all duration-500 hover:-translate-y-0.5"
-                aria-label="social"
+                aria-label={label}
               >
                 <Icon className="w-4 h-4" />
               </a>
@@ -39,12 +47,12 @@ const Footer = () => {
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li>
               <a 
-                href="https://share.google/6uZ1PfA32ixJNm9Ic" 
+                href="https://share.google/Vth38o2n6a2NQu6Os" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex gap-2 hover:text-primary transition-colors"
               >
-                <MapPin className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" /> Shivranjani Park, Madhapar Circle, Rajkot
+                <MapPin className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" /> Shivranjani Park, beside Atulyam Angan 1, near Morbi OverBridge, Vrindavan Society, Madhapar, Rajkot
               </a>
             </li>
             <li>

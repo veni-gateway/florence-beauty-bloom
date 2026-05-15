@@ -2,49 +2,49 @@
 // Located at: src/lib/seo.ts
 
 export const BUSINESS_INFO = {
-  // Your business details
+  // Business details
   name: 'Florence Beauty Studio',
   domain: 'florencebeautybloom.com',
-  phone: '+91-XXXXXXXXXX', // TODO: Update with actual phone
-  email: 'hello@florencebeauty.com', // TODO: Update with actual email
+  phone: '+91-7600788388',
+  email: 'florencebeautystudio08@gmail.com',
+  founder: 'Shobhana Parmar',
   
   // Address information
   address: {
-    street: 'Bandra, Rajkot', // TODO: Update with full address
+    street: 'Shivranjani Park, beside Atulyam Angan 1, near Morbi OverBridge, Vrindavan Society, Madhapar',
     city: 'Rajkot',
-    state: 'Maharashtra',
-    zipCode: '400050',
+    state: 'Gujarat',
+    zipCode: '360006',
     country: 'India',
   },
   
   // Coordinates for your location
   geo: {
-    latitude: '19.0596', // TODO: Update with actual coordinates
-    longitude: '72.8295',
+    latitude: '22.3338621',
+    longitude: '70.7718361',
   },
   
   // Social media links
   social: {
-    instagram: 'https://www.instagram.com/__florence__beauty__?igsh=c3huMnRlbTJjbTUw', 
-    facebook: 'https://facebook.com/florencebeauty', // TODO: Update
-    twitter: '@florencebeauty',
+    instagram: 'https://www.instagram.com/__florence__beauty__?igsh=c3huMnRlbTJjbTUw',
+    googleMaps: 'https://share.google/Vth38o2n6a2NQu6Os',
   },
   
-  // Business hours (optional)
+  // Business hours
   hours: {
-    monday: '10:00 AM - 6:00 PM',
-    tuesday: '10:00 AM - 6:00 PM',
-    wednesday: '10:00 AM - 6:00 PM',
-    thursday: '10:00 AM - 6:00 PM',
-    friday: '10:00 AM - 6:00 PM',
-    saturday: '10:00 AM - 6:00 PM',
-    sunday: 'Closed',
+    monday: '8:00 AM - 10:00 PM',
+    tuesday: '8:00 AM - 10:00 PM',
+    wednesday: '8:00 AM - 10:00 PM',
+    thursday: '8:00 AM - 10:00 PM',
+    friday: '8:00 AM - 10:00 PM',
+    saturday: '8:00 AM - 10:00 PM',
+    sunday: '8:00 AM - 10:00 PM',
   },
   
   // SEO Keywords
   keywords: {
-    primary: 'beauty studio, bridal makeup, hair salon',
-    secondary: 'beauty services Rajkot, luxury salon, makeup artist',
+    primary: 'beauty studio, bridal makeup, hair salon, Rajkot',
+    secondary: 'beauty services Rajkot, luxury salon, makeup artist, hair stylist',
   },
 };
 

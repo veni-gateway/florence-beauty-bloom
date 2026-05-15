@@ -14,7 +14,7 @@ const timeline = [
   {
     year: "2020",
     t: "A small chair, a big dream",
-    d: "Florence began as a one-chair studio in Bandra. Word travelled in whispers.",
+    d: "Florence began as a one-chair studio in Rajkot. Word travelled in whispers.",
   },
   {
     year: "2023",

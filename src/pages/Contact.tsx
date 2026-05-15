@@ -136,7 +136,7 @@ Looking forward to hearing from you!`;
           <Reveal delay={0.15} className="lg:col-span-2">
             <div className="space-y-5">
               {[
-                { Icon: MapPin, t: "The Studio", d: "Shivranjani Park, beside Atulyam Aagan -1, near Morbi OverBridge, Vrindavan Society, Madhapar, Rajkot, Gujarat 360006", link : "https://share.google/38YTTfGZgzH2bOjvJ" },
+                { Icon: MapPin, t: "The Studio", d: "Shivranjani Park, beside Atulyam Angan 1, near Morbi OverBridge, Vrindavan Society, Madhapar, Rajkot, Gujarat 360006", link : "https://share.google/Vth38o2n6a2NQu6Os" },
                 { Icon: Phone, t: "Call or text", d: "+91 7600788388" , link: "tel:+917600788388"},
                 { Icon: Mail, t: "Email", d: "florencebeautystudio08@gmail.com", link: "mailto:florencebeautystudio08@gmail.com" },
                 { Icon: Clock, t: "Hours", d: "Mon — Sun ・ 8am to 10pm" },
